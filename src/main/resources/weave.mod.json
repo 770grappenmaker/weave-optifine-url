@@ -1,0 +1,11 @@
+{
+  "mixinConfigs": [],
+  "entrypoints": [
+    "com.grappenmaker.optifineweave.WeaveOptifineURL"
+  ],
+  "hooks": [
+    "com.grappenmaker.optifineweave.HttpHook",
+    "com.grappenmaker.optifineweave.CapeHook",
+    "com.grappenmaker.optifineweave.LunarBridgeHook"
+  ]
+}
