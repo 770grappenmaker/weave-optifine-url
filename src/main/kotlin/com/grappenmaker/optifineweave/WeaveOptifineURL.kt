@@ -13,13 +13,14 @@ import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.tree.FieldInsnNode
 import org.objectweb.asm.tree.LdcInsnNode
 import org.objectweb.asm.tree.MethodNode
+import java.nio.file.Path
 import java.nio.file.Paths
 import kotlin.io.path.exists
 import kotlin.io.path.readText
 import kotlin.io.path.writeText
 
 var optifineURL: String = "http://s.optifine.net"
-val config = Paths.get(System.getProperty("user.home"), ".weave", "weaveOptifineURL.txt")
+val config: Path = Paths.get(System.getProperty("user.home"), ".weave", "weaveOptifineURL.txt")
 
 @Suppress("unused")
 class WeaveOptifineURL : ModInitializer {
@@ -85,9 +86,9 @@ class CapeHook : Hook("net/optifine/player/CapeUtils") {
 }
 
 @Suppress("unused")
-class LunarBridgeHook : Hook("*") {
+class LunarBridgeHook : Hook() {
     override fun transform(node: ClassNode, cfg: AssemblerConfig) {
-        if (!node.name.startsWith("com/moonsworth/")) return
+        if (!node.name.startsWith("com/moonsworth")) return
 
         val clinit = node.methods.find { it.name == "<clinit>" } ?: return
         val insn = clinit.instructions.filterIsInstance<LdcInsnNode>()

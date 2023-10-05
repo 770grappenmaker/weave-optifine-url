@@ -1,10 +1,12 @@
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.9.10"
     id("com.github.weave-mc.weave-gradle") version "fac948db7f"
 }
 
 group = "com.grappenmaker"
-version = "0.1"
+version = "0.2"
+
+minecraft.version("1.8.9")
 
 repositories {
     mavenCentral()
@@ -12,8 +14,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.weave-mc:weave-loader:v0.2.3")
+    compileOnly("com.github.weave-mc:weave-loader:v0.2.4")
 }
 
-kotlin { jvmToolchain(8) }
-minecraft.version("1.8.9")
+kotlin {
+    jvmToolchain(8)
+}
