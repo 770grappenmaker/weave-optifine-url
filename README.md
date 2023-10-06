@@ -5,8 +5,8 @@ Right now, it also assumes Minecraft 1.8.9, but does not assume a specific clien
 
 ### Installing
 1. Download [Weave Loader](https://github.com/Weave-MC/Weave-Loader/releases).
-2. Place `weave-optifine-url-0.1.jar` in `.weave/mods`.
-3. Launch Weave using a tool of choice, like [Weave Manager](https://github.com/exejar/Weave-Manager) or [LCQT2](https://github.com/nilsen84/lcqt2).
+2. Place `weave-optifine-url-0.2.jar` in `.weave/mods`.
+3. Launch Weave using a tool of choice, like [Weave Manager](https://github.com/exejar/Weave-Manager).
 
 ### Usage
 Once in-game, you can type `/setoptifineurl <url>` to set your optifine URL to a service of choice.

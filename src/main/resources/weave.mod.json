@@ -1,5 +1,4 @@
 {
-  "mixinConfigs": [],
   "entrypoints": [
     "com.grappenmaker.optifineweave.WeaveOptifineURL"
   ],
